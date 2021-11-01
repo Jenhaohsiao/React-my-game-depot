@@ -1,0 +1,14 @@
+.platformItemBackground{
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: 'center';
+    background-size: cover; 
+    height: 200px; 
+    margin: 10px 0;
+}
+
+.platformItemTitle{
+    font-size: 5vh;
+    color:#cccccc;
+    padding: 10px;
+}
