@@ -1,9 +1,8 @@
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SearchByPlatforms from "./components/SearchByPlatforms";
 import NavgationBar from "./components/NavgationBar";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
   Link,
@@ -14,14 +13,14 @@ import {
 function App() {
   return (
     <>
-      <Router>
-        <Route>
-          <NavgationBar />
-          <main>
-            <SearchByPlatforms />
-          </main>
-        </Route>
-      </Router>
+      <BrowserRouter>
+        <div>
+          <Route>
+            <NavgationBar />
+          </Route>
+        </div>
+      </BrowserRouter>
+      <main></main>
     </>
   );
 }

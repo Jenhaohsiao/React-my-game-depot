@@ -1,0 +1,18 @@
+.linkText{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+}
+
+.linkText:hover{
+    color:rgb(244, 233, 171);
+    text-decoration: none;
+}
+
+.linkText:active{
+    color:rgb(189, 112, 5) !important;
+    /* text-decoration: none; */
+}
+
+.NoTextDecoration{
+    text-decoration: none;
+}

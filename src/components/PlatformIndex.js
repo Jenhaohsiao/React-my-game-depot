@@ -2,7 +2,7 @@ import useApiFetchData from "./useApiFetchData";
 import PlatformItem from "./PlatformItem";
 import { Container, Row, Col } from "react-bootstrap";
 
-function SearchByPlatforms() {
+function PlatformIndex() {
   // API Key
   // 04f19512cf744444b13c42bd2f1026d4
   const APIKey = "04f19512cf744444b13c42bd2f1026d4";
@@ -12,12 +12,12 @@ function SearchByPlatforms() {
 
   return (
     <>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        quoteData && (
-          <>
-            <Container>
+      <Container>
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          quoteData && (
+            <>
               <Row>
                 {quoteData.results.map((gameItem, i) => {
                   return (
@@ -30,12 +30,12 @@ function SearchByPlatforms() {
                   );
                 })}
               </Row>
-            </Container>
-          </>
-        )
-      )}
+            </>
+          )
+        )}
+      </Container>
     </>
   );
 }
 
-export default SearchByPlatforms;
+export default PlatformIndex;

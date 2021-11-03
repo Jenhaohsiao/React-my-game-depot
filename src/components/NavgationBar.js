@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
-
+import Logo from "../images/logo-long.png";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,28 +8,48 @@ import {
   NavLink,
   history,
 } from "react-router-dom";
-
-import Logo from "../images/logo-long.png";
+import Home from "./Home";
+import News from "./News";
+import PlatformIndex from "./PlatformIndex";
+import styles from "../styles/navgation.module.css";
 
 function NavgationBar() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">
-            {" "}
-            <img src={Logo} alt="logo" />
-          </Navbar.Brand>
-          <Route>
+      <Router>
+        <Navbar bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand href="#home">
+              {" "}
+              <img src={Logo} alt="logo" />
+            </Navbar.Brand>
+
             <Nav className="me-auto">
-              <Link to="/">Home</Link>
-              <Link to="/news">News</Link>
-              <Link to="/search">Search</Link>
-              <Link to="/myDepot">My Depot</Link>
+              <Nav.Link>
+                <Link to="/" className={styles.linkText}>
+                  <span>Home</span>
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/news" className={styles.linkText}>
+                  <span>News</span>
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/platform" className={styles.linkText}>
+                  <span>Platform</span>
+                </Link>
+              </Nav.Link>
             </Nav>
-          </Route>
-        </Container>
-      </Navbar>
+          </Container>
+        </Navbar>
+
+        <Switch>
+          <Route path="/platform" component={PlatformIndex} />
+          <Route path="/news" component={News} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </Router>
     </>
   );
 }

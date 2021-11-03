@@ -1,0 +1,14 @@
+.homeBackGround{
+    background-color: dimgray;
+    height: 100vh;
+}
+
+.homeContainer{
+    margin: auto;
+    min-width: 900px;
+    max-width: 1200px;
+    height: 80vh;
+    padding: 10px;
+    text-align: center;
+    
+}
