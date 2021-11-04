@@ -23,7 +23,7 @@ function useApiFetchData(initialUrl) {
       console.log("responeJson:", responeJson);
       setData(responeJson);
 
-      setUrl();
+      setUrl(null);
 
       // All done!
       setIsLoading(false);

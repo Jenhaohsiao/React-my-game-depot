@@ -23,9 +23,11 @@ function PlatformIndex() {
                 {quoteData.results.map((gameItem, i) => {
                   return (
                     <>
-                      {" "}
                       <Col xs={12} md={6} lg={4} xl={3}>
-                        <PlatformItem index={i} item={gameItem} />
+                        <PlatformItem
+                          index={i + gameItem.name}
+                          item={gameItem}
+                        />
                       </Col>
                     </>
                   );
