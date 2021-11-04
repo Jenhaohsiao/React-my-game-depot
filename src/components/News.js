@@ -1,8 +1,10 @@
+import { Container, Row, Col } from "react-bootstrap";
+
 function News() {
   return (
-    <div>
+    <Container>
       <h1>News Page!!!</h1>
-    </div>
+    </Container>
   );
 }
 

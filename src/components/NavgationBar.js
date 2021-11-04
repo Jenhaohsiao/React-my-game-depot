@@ -1,4 +1,8 @@
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import appStyles from "../styles/app.module.css";
+import styles from "../styles/navgation.module.css";
+
 import Logo from "../images/logo-long.png";
 import {
   BrowserRouter as Router,
@@ -11,9 +15,13 @@ import {
 import Home from "./Home";
 import News from "./News";
 import PlatformIndex from "./PlatformIndex";
-import styles from "../styles/navgation.module.css";
+import ApiLoading from "./ApiLoading";
 
 function NavgationBar() {
+  useEffect(() => {
+    console.log("Navgation Bar loaded");
+  }, []);
+
   return (
     <>
       <Router>
@@ -26,29 +34,36 @@ function NavgationBar() {
 
             <Nav className="me-auto">
               <Nav.Link>
-                <Link to="/" className={styles.linkText}>
+                <NavLink to="/" className={styles.linkText}>
                   <span>Home</span>
-                </Link>
+                </NavLink>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/news" className={styles.linkText}>
+                <NavLink to="/news" className={styles.linkText}>
                   <span>News</span>
-                </Link>
+                </NavLink>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/platform" className={styles.linkText}>
+                <NavLink to="/platform" className={styles.linkText}>
                   <span>Platform</span>
-                </Link>
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link>
+                <NavLink to="/ApiLoading" className={styles.linkText}>
+                  <span>ApiLoading</span>
+                </NavLink>
               </Nav.Link>
             </Nav>
           </Container>
         </Navbar>
-
-        <Switch>
-          <Route path="/platform" component={PlatformIndex} />
-          <Route path="/news" component={News} />
-          <Route path="/" component={Home} />
-        </Switch>
+        <div className={appStyles.babyContainer}>
+          <Switch>
+            <Route path="/platform" component={PlatformIndex} />
+            <Route path="/news" component={News} />
+            <Route path="/ApiLoading" component={ApiLoading} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </div>
       </Router>
     </>
   );

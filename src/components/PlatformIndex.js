@@ -1,6 +1,7 @@
 import useApiFetchData from "./useApiFetchData";
 import PlatformItem from "./PlatformItem";
 import { Container, Row, Col } from "react-bootstrap";
+import ApiLoading from "./ApiLoading";
 
 function PlatformIndex() {
   // API Key
@@ -14,7 +15,7 @@ function PlatformIndex() {
     <>
       <Container>
         {isLoading ? (
-          <p>Loading...</p>
+          <ApiLoading />
         ) : (
           quoteData && (
             <>

@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavgationBar from "./components/NavgationBar";
+
 import {
   BrowserRouter,
   Switch,
@@ -14,13 +15,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div>
-          <Route>
-            <NavgationBar />
-          </Route>
-        </div>
+        <Route>
+          <NavgationBar />
+        </Route>
       </BrowserRouter>
-      <main></main>
     </>
   );
 }
