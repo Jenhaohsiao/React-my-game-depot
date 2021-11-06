@@ -2,6 +2,7 @@ import useApiFetchData from "./useApiFetchData";
 import PlatformItem from "./PlatformItem";
 import { Container, Row, Col } from "react-bootstrap";
 import ApiLoading from "./ApiLoading";
+import Header from "./Header";
 
 function PlatformIndex() {
   // API Key
@@ -13,6 +14,7 @@ function PlatformIndex() {
 
   return (
     <>
+      <Header title="Platform" />
       <Container>
         {isLoading ? (
           <ApiLoading />

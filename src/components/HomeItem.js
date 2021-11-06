@@ -1,5 +1,5 @@
 import styles from "../styles/home.module.css";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 function HomeItem({ index, gameItem }) {
   console.log("HomeItem props:", gameItem);

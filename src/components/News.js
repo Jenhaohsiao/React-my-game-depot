@@ -1,10 +1,14 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import Header from "./Header";
 
 function News() {
   return (
-    <Container>
-      <h1>News Page!!!</h1>
-    </Container>
+    <>
+      <Header title="News" />
+      <Container>
+        <h1>News Page</h1>
+      </Container>
+    </>
   );
 }
 

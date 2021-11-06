@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import styles from "../styles/platform.module.css";
-import { Container, Row, Col } from "react-bootstrap";
 
 function PlatformItem({ index, item }) {
   // console.log("GameItem props:", item);

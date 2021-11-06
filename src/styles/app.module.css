@@ -1,3 +1,4 @@
+ 
 .babyContainer{
 background-color:rgb(225,225,225);
 min-height:100vh;
@@ -81,3 +82,11 @@ height:100%;
     }
   }
   
+  .sitePageHeader {
+    background-color:  rgb(232, 162, 33);
+    font: 2em sans-serif;
+    color:rgb(255, 255, 255);
+    padding: 10px 5px;
+    text-align: left;
+
+  }
