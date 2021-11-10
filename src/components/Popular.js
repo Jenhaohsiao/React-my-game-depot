@@ -1,6 +1,6 @@
-import styles from "../styles/home.module.css";
+import styles from "../styles/popular.module.css";
 import { useState } from "react";
-import { Container, Carousel } from "react-bootstrap";
+import { Container, Carousel, Card } from "react-bootstrap";
 import ApiLoading from "./ApiLoading";
 import useApiFetchData from "./useApiFetchData";
 import Header from "./Header";
@@ -38,11 +38,11 @@ function Popular() {
                 {quoteData.results.map((gameItem, i) => {
                   // return <HomeItem index={gameItem.id} gameItem={gameItem} />;
                   return (
-                    <Carousel.Item onClick={handleClick}>
+                    <Carousel.Item onClick={handleClick} key={gameItem.id}>
                       <Link
                         to={{
                           pathname: `/GameInfoPage/${gameItem.name}`,
-                          state: gameItem,
+                          details: gameItem,
                         }}
                       >
                         <div

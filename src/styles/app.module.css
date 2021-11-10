@@ -90,3 +90,9 @@ height:100%;
     text-align: left;
 
   }
+
+  .siteHeaderSubTitle{
+    padding:0 0 0 15px;
+    display: inline-block;
+    font-weight: 900;
+  }

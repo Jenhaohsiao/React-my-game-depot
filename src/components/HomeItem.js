@@ -1,4 +1,4 @@
-import styles from "../styles/home.module.css";
+import styles from "../styles/popular.module.css";
 import { Carousel } from "react-bootstrap";
 
 function HomeItem({ index, gameItem }) {

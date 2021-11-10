@@ -1,0 +1,33 @@
+.gameBackgroundImage{
+    min-height: 200px; 
+    height: 80vh; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;   
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+} 
+
+.gameInfoSection{
+    color:cornsilk;
+}
+.gameInfoRow{
+    padding: 5px 0; 
+}
+
+.gameInfoRowItem{
+    margin: 0 10px;
+    color:rgb(212, 238, 239);
+    font-weight: 900;
+    display: inline-block;
+}
+
+.carouselImage{
+    margin:10% 0 0 0 ;
+    min-height: 200px;
+    background-color: #cccccc;  
+    height: 40vh; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;  
+   
+}
