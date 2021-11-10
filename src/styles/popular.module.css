@@ -15,3 +15,28 @@
     background-size: cover;  
     color:red
 }
+
+.cardItemLink{
+    text-decoration: none;
+}
+.cardItem{
+    opacity: 0.5;
+    color:rgb(218, 168, 178);
+}
+.cardImage{
+    height:20vh;
+    object-fit: cover;
+  
+}
+.cardItem:hover{
+    opacity: 1;
+    color:rgb(255, 255, 255);
+}
+
+.cardTitle{
+    font-size: 1em;
+  
+}
+.cardBody{
+    background-color: black;
+}
