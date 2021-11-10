@@ -4,8 +4,9 @@ import { Container, Carousel } from "react-bootstrap";
 import ApiLoading from "./ApiLoading";
 import useApiFetchData from "./useApiFetchData";
 import Header from "./Header";
+import { Link } from "react-router-dom";
 
-function Home() {
+function Popular() {
   const APIKey = "04f19512cf744444b13c42bd2f1026d4";
   const date = new Date().toLocaleDateString(undefined, { day: "2-digit" });
   const month = new Date().toLocaleDateString(undefined, { month: "2-digit" });
@@ -26,7 +27,7 @@ function Home() {
 
   return (
     <>
-      <Header title="Home" />
+      <Header title="Popular" />
       <Container className={styles.homeContainer}>
         {isLoading ? (
           <ApiLoading />
@@ -38,17 +39,24 @@ function Home() {
                   // return <HomeItem index={gameItem.id} gameItem={gameItem} />;
                   return (
                     <Carousel.Item onClick={handleClick}>
-                      <div
-                        className={styles.carouselImage}
-                        style={{
-                          backgroundImage:
-                            "url(" + gameItem.background_image + ")",
+                      <Link
+                        to={{
+                          pathname: `/GameInfoPage/${gameItem.name}`,
+                          state: gameItem,
                         }}
                       >
-                        <Carousel.Caption>
-                          <h3>{gameItem.name}</h3>
-                        </Carousel.Caption>
-                      </div>
+                        <div
+                          className={styles.carouselImage}
+                          style={{
+                            backgroundImage:
+                              "url(" + gameItem.background_image + ")",
+                          }}
+                        >
+                          <Carousel.Caption>
+                            <h3>{gameItem.name}</h3>
+                          </Carousel.Caption>
+                        </div>
+                      </Link>
                     </Carousel.Item>
                   );
                 })}
@@ -61,4 +69,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Popular;

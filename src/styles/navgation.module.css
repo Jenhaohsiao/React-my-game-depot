@@ -16,3 +16,8 @@
 .NoTextDecoration{
     text-decoration: none;
 }
+
+.gitHubLogo{
+    height: 30px;
+    padding: 0 20px;
+}

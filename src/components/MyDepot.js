@@ -1,8 +1,16 @@
+import Header from "./Header";
+import { Container } from "react-bootstrap";
+
 function MyDepot() {
   return (
-    <div>
-      <h1>MyDepot Page!!!</h1>
-    </div>
+    <>
+      <Header title="My Depot" />
+      <>
+        <Container>
+          <h1>MyDepot</h1>
+        </Container>
+      </>
+    </>
   );
 }
 

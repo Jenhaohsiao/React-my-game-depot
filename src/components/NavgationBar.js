@@ -11,6 +11,7 @@ import appStyles from "../styles/app.module.css";
 import styles from "../styles/navgation.module.css";
 
 import Logo from "../images/logo-long.png";
+import GitHubLogo from "../images/github.png";
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,10 +20,11 @@ import {
   NavLink,
   history,
 } from "react-router-dom";
-import Home from "./Home";
-import News from "./News";
+import Popular from "./Popular";
+import MyDepot from "./MyDepot";
 import PlatformIndex from "./PlatformIndex";
 import ApiLoading from "./ApiLoading";
+import GameInfoPage from "./GameInfoPage";
 
 function NavgationBar() {
   useEffect(() => {
@@ -34,7 +36,7 @@ function NavgationBar() {
       <Router>
         <Navbar bg="dark" variant="dark" expand="lg">
           <Container>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
               <img src={Logo} alt="logo" />
             </Navbar.Brand>
 
@@ -52,12 +54,7 @@ function NavgationBar() {
               <Nav className="me-auto">
                 <Nav.Link>
                   <NavLink to="/" className={styles.linkText}>
-                    <span>Home</span>
-                  </NavLink>
-                </Nav.Link>
-                <Nav.Link>
-                  <NavLink to="/news" className={styles.linkText}>
-                    <span>News</span>
+                    <span>Popular</span>
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
@@ -66,10 +63,27 @@ function NavgationBar() {
                   </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <NavLink to="/ApiLoading" className={styles.linkText}>
-                    <span>ApiLoading</span>
+                  <NavLink to="/MyDepot" className={styles.linkText}>
+                    <span>My Depot</span>
                   </NavLink>
                 </Nav.Link>
+                <Nav.Link
+                  href="https://github.com/Jenhaohsiao/React-my-game-depot"
+                  target="_blank"
+                  className={styles.linkText}
+                >
+                  <span>Github</span>
+                </Nav.Link>
+                <Navbar.Brand
+                  href="https://github.com/Jenhaohsiao/React-my-game-depot"
+                  target="_blank"
+                >
+                  <img
+                    className={styles.gitHubLogo}
+                    src={GitHubLogo}
+                    alt="GitHubLogo"
+                  />
+                </Navbar.Brand>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -77,9 +91,10 @@ function NavgationBar() {
         <div className={appStyles.babyContainer}>
           <Switch>
             <Route path="/platform" component={PlatformIndex} />
-            <Route path="/news" component={News} />
+            <Route path="/myDepot" component={MyDepot} />
             <Route path="/ApiLoading" component={ApiLoading} />
-            <Route path="/" component={Home} />
+            <Route path="/GameInfoPage/:name" component={GameInfoPage} />
+            <Route exact path="/" component={Popular} />
           </Switch>
         </div>
       </Router>
