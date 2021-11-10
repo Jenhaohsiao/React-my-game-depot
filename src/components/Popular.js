@@ -1,6 +1,6 @@
 import styles from "../styles/popular.module.css";
-import { useState } from "react";
-import { Container, Carousel, Card } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { Container, Button, Card, Col, Row } from "react-bootstrap";
 import ApiLoading from "./ApiLoading";
 import useApiFetchData from "./useApiFetchData";
 import Header from "./Header";
@@ -16,14 +16,13 @@ function Popular() {
   const dateRange = startDate + "," + endDate;
   const ordering = "-rating";
   const quoteUrl = `https://api.rawg.io/api/games?key=${APIKey}&dates=${dateRange}&ordering=${ordering}`;
-  console.log("quoteUrl:", quoteUrl);
 
   const [quoteData, isLoading, fetchNewUrl] = useApiFetchData(quoteUrl);
   const [containerIndex, setContainerIndex] = useState(0);
 
-  function handleClick() {
-    console.log("handleClick");
-  }
+  useEffect(() => {
+    console.log("quoteData:", quoteData);
+  }, [quoteData]);
 
   return (
     <>
@@ -34,33 +33,37 @@ function Popular() {
         ) : (
           quoteData && (
             <>
-              <Carousel>
+              <Row>
                 {quoteData.results.map((gameItem, i) => {
-                  // return <HomeItem index={gameItem.id} gameItem={gameItem} />;
                   return (
-                    <Carousel.Item onClick={handleClick} key={gameItem.id}>
-                      <Link
-                        to={{
-                          pathname: `/GameInfoPage/${gameItem.name}`,
-                          details: gameItem,
-                        }}
-                      >
-                        <div
-                          className={styles.carouselImage}
-                          style={{
-                            backgroundImage:
-                              "url(" + gameItem.background_image + ")",
+                    <>
+                      <Col xs={12} md={6} lg={4} xl={3}>
+                        <Link
+                          className={styles.cardItemLink}
+                          to={{
+                            pathname: `/GameInfoPage/${gameItem.name}`,
+                            details: gameItem,
                           }}
                         >
-                          <Carousel.Caption>
-                            <h3>{gameItem.name}</h3>
-                          </Carousel.Caption>
-                        </div>
-                      </Link>
-                    </Carousel.Item>
+                          <Card className={styles.cardItem}>
+                            <Card.Img
+                              className={styles.cardImage}
+                              variant="top"
+                              src={gameItem.background_image}
+                            />
+                            <Card.Body className={styles.cardBody}>
+                              <Card.Title className={styles.cardTitle}>
+                                {gameItem.name}{" "}
+                              </Card.Title>
+                              <Card.Text></Card.Text>
+                            </Card.Body>
+                          </Card>
+                        </Link>
+                      </Col>
+                    </>
                   );
                 })}
-              </Carousel>
+              </Row>
             </>
           )
         )}
