@@ -4,7 +4,7 @@
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;   
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+    background-image: linear-gradient(rgba(65, 53, 0, 0.3), rgba(63, 52, 1, 0.3));
 } 
 
 .gameInfoSection{
@@ -25,7 +25,7 @@
     margin:10% 0 0 0 ;
     min-height: 200px;
     background-color: #cccccc;  
-    height: 40vh; 
+    height: 50vh; 
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;  

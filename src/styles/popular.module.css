@@ -22,6 +22,7 @@
 .cardItem{
     opacity: 0.5;
     color:rgb(218, 168, 178);
+    margin-bottom: 10px;
 }
 .cardImage{
     height:20vh;

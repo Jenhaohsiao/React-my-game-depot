@@ -1,10 +1,11 @@
-import { Container, Carousel } from "react-bootstrap";
+import { Container, Carousel, Button } from "react-bootstrap";
 import Header from "./Header";
 import styles from "../styles/gameInfo.module.css";
 
 import { MdDateRange } from "react-icons/md";
 import { GiFlatPlatform } from "react-icons/gi";
 import { AiFillShopping } from "react-icons/ai";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 
 function GameInfoPage(gameItem) {
   console.log("gameItem:", gameItem);
@@ -13,7 +14,7 @@ function GameInfoPage(gameItem) {
     <>
       {gameItem.location.details ? (
         <>
-          <Header title="Game Info" subTitle={gameItem.location.details.name} />
+          <Header subTitle="Game Info" title={gameItem.location.details.name} />
           <div
             style={{
               backgroundImage:
@@ -66,6 +67,12 @@ function GameInfoPage(gameItem) {
                 ) : (
                   <div div className={styles.gameInfoRowItem}></div>
                 )}
+
+                <div className={styles.gameInfoRow}>
+                  <Button variant="success" size="sm">
+                    <BsFillSuitHeartFill /> Add to my list
+                  </Button>
+                </div>
               </div>
 
               <>

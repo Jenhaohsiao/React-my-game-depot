@@ -40,7 +40,7 @@ function NavgationBar() {
               <img src={Logo} alt="logo" />
             </Navbar.Brand>
 
-            <Form className="d-flex">
+            {/* <Form className="d-flex">
               <FormControl
                 type="search"
                 placeholder="Search"
@@ -48,7 +48,7 @@ function NavgationBar() {
                 aria-label="Search"
               />
               <Button variant="outline-success">Search</Button>
-            </Form>
+            </Form> */}
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -57,23 +57,13 @@ function NavgationBar() {
                     <span>Popular</span>
                   </NavLink>
                 </Nav.Link>
-                <Nav.Link>
-                  <NavLink to="/platform" className={styles.linkText}>
-                    <span>Platform</span>
-                  </NavLink>
-                </Nav.Link>
+
                 <Nav.Link>
                   <NavLink to="/MyDepot" className={styles.linkText}>
                     <span>My Depot</span>
                   </NavLink>
                 </Nav.Link>
-                <Nav.Link
-                  href="https://github.com/Jenhaohsiao/React-my-game-depot"
-                  target="_blank"
-                  className={styles.linkText}
-                >
-                  <span>Github</span>
-                </Nav.Link>
+
                 <Navbar.Brand
                   href="https://github.com/Jenhaohsiao/React-my-game-depot"
                   target="_blank"
