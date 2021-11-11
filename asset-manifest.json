@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-my-game-depot/static/css/main.555ae8df.chunk.css",
+    "main.js": "/React-my-game-depot/static/js/main.22ea520a.chunk.js",
+    "main.js.map": "/React-my-game-depot/static/js/main.22ea520a.chunk.js.map",
+    "runtime-main.js": "/React-my-game-depot/static/js/runtime-main.c3c1a4dd.js",
+    "runtime-main.js.map": "/React-my-game-depot/static/js/runtime-main.c3c1a4dd.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/React-my-game-depot/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.a59126b2.chunk.js": "/React-my-game-depot/static/js/2.a59126b2.chunk.js",
+    "static/js/2.a59126b2.chunk.js.map": "/React-my-game-depot/static/js/2.a59126b2.chunk.js.map",
+    "static/js/3.f53eb007.chunk.js": "/React-my-game-depot/static/js/3.f53eb007.chunk.js",
+    "static/js/3.f53eb007.chunk.js.map": "/React-my-game-depot/static/js/3.f53eb007.chunk.js.map",
+    "index.html": "/React-my-game-depot/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/React-my-game-depot/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.555ae8df.chunk.css.map": "/React-my-game-depot/static/css/main.555ae8df.chunk.css.map",
+    "static/js/2.a59126b2.chunk.js.LICENSE.txt": "/React-my-game-depot/static/js/2.a59126b2.chunk.js.LICENSE.txt",
+    "static/media/github.6305a176.png": "/React-my-game-depot/static/media/github.6305a176.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3c1a4dd.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.a59126b2.chunk.js",
+    "static/css/main.555ae8df.chunk.css",
+    "static/js/main.22ea520a.chunk.js"
+  ]
+}
