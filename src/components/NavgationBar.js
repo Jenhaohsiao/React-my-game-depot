@@ -83,7 +83,7 @@ function NavgationBar() {
             <Route path="/platform" component={PlatformIndex} />
             <Route path="/myDepot" component={MyDepot} />
             <Route path="/ApiLoading" component={ApiLoading} />
-            <Route path="/GameInfoPage/:name" component={GameInfoPage} />
+            <Route path="/GameInfoPage/:id" component={GameInfoPage} />
             <Route exact path="/" component={Popular} />
           </Switch>
         </div>

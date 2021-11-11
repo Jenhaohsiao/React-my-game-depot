@@ -41,7 +41,7 @@ function Popular() {
                         <Link
                           className={styles.cardItemLink}
                           to={{
-                            pathname: `/GameInfoPage/${gameItem.name}`,
+                            pathname: `/GameInfoPage/${gameItem.id}`,
                             details: gameItem,
                           }}
                         >
