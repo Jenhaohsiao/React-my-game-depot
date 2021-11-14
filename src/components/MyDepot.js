@@ -1,22 +1,20 @@
 import Header from "./Header";
 import { Container } from "react-bootstrap";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-function MyDepot({ todos }) {
-  console.log("my depot todos:", todos);
+function MyDepot() {
+  const gameList = useSelector((state) => state.gameList.value);
+  console.log("gameList:", gameList);
   return (
     <>
       <Header title="My Depot" />
       <>
         <Container>
-          {todos ? (
+          {gameList ? (
             <>
               <main>
-                <p>List of TODOs</p>
-                <ul>
-                  {todos.map(({ id, title }) => (
-                    <li key={id}>{title}</li>
-                  ))}
-                </ul>
+                <p>Game List: {gameList}</p>
               </main>
             </>
           ) : (

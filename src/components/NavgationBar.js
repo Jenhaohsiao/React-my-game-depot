@@ -40,7 +40,7 @@ function NavgationBar() {
               <img src={Logo} alt="logo" />
             </Navbar.Brand>
 
-            {/* <Form className="d-flex">
+            <Form className="d-flex">
               <FormControl
                 type="search"
                 placeholder="Search"
@@ -48,7 +48,7 @@ function NavgationBar() {
                 aria-label="Search"
               />
               <Button variant="outline-success">Search</Button>
-            </Form> */}
+            </Form>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -84,6 +84,7 @@ function NavgationBar() {
             <Route path="/myDepot" component={MyDepot} />
             <Route path="/ApiLoading" component={ApiLoading} />
             <Route path="/GameInfoPage/:id" component={GameInfoPage} />
+            <Route path="/" component={Popular} />
             <Route exact path="/" component={Popular} />
           </Switch>
         </div>

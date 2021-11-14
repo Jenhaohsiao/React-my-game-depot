@@ -7,29 +7,20 @@ import { GiFlatPlatform } from "react-icons/gi";
 import { AiFillShopping } from "react-icons/ai";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 
-import { connect } from "react-redux";
-import { arrayOf, shape, number, string } from "prop-types";
-import { addToDo } from "./actions";
 import { useState } from "react";
 import AddIntoListButton from "./AddIntoListButton";
-import reducer from "./reducer";
+import { useSelector, useDispatch } from "react-redux";
+import { addGame } from "../redux/slice/gameListSlice";
 
 function GameInfoPage(gameItem) {
   const [gameObj, setGameObj] = useState(gameItem.location.details);
   console.log("gameItem:", gameItem);
 
-  const dispatch = () => {
-    console.log("dispatch");
-    reducer(gameObj, "ADD_TO_DO");
-  };
+  const dispatch = useDispatch(addGame());
 
   const handleAddToList = (event) => {
     console.log("handleAddToList:", gameObj);
     event.preventDefault();
-    // to modify state (AKA add a nnew "to do", we need to dispatch an action)
-    // this will pass an action to the reducer which will take care of our stae modification
-    dispatch(addToDo({ id: gameObj.id, title: gameObj.name }));
-    // setTodos((prevTodos) => [...prevTodos, { title: todoTitle, id: prevTodos.length }]);
   };
 
   return (
